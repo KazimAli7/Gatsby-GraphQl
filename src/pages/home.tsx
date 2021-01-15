@@ -19,18 +19,11 @@ const GET_GREETING = gql`query
     }
     }
 `;
-
-// const GET_GREETING = gql`query
-//     getAllPost($page: page){
-//         result {
-//             title
-//         }
-//     }
-// `;
 function Hello() {
   const { loading, error, data } = useQuery(GET_GREETING, {
     variables: { page: 1 },
   });
+  console.log('data check here', data)
   if (loading) return <div>
     <SEO title="Great Gatsby" />
         {/* <Bio /> */}
