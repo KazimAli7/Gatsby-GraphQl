@@ -20,6 +20,9 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-apollo',
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/assets`,

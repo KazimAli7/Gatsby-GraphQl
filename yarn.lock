@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@apollo/client@^3.3.7":
+"@apollo/client@^3.0.0", "@apollo/client@^3.3.7":
   "integrity" "sha512-Cb0OqqvlehlRHtHIXRIS/Pe5WYU4hHl1FznXTRSxBAN42WmBUM3zy/Unvw183RdWMyV6Kc2pFKOEuaG1K7JTAQ=="
   "resolved" "https://registry.npmjs.org/@apollo/client/-/client-3.3.7.tgz"
   "version" "3.3.7"
@@ -6522,6 +6522,13 @@
     "lodash" "^4.17.20"
     "micromatch" "^4.0.2"
 
+"gatsby-plugin-apollo@^3.0.2":
+  "integrity" "sha512-TZLc1FRsbw2TNlQ73EpAyfi9ee6i9rSUCcA1GzP/eWV/5XEGrhzMpWjMm8rbyXvQ9yHCRj0U+tZe9YGdlSv/kQ=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-apollo/-/gatsby-plugin-apollo-3.0.2.tgz"
+  "version" "3.0.2"
+  dependencies:
+    "isomorphic-fetch" "^3.0.0"
+
 "gatsby-plugin-feed@^2.7.0":
   "integrity" "sha512-TTR6d7o3xfswuZSWddnZIM3FB9FmE5eTJ3dYlcreQ+HosdmaUu8+XXm1ZuP0XD5hRsx/8M6yn75Y9tfnuyKqGQ=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-feed/-/gatsby-plugin-feed-2.7.0.tgz"
@@ -8741,6 +8748,14 @@
   "integrity" "sha1-TkMekrEalzFjaqH5yNHMvP2reN8="
   "resolved" "https://registry.npmjs.org/isobject/-/isobject-3.0.1.tgz"
   "version" "3.0.1"
+
+"isomorphic-fetch@^3.0.0":
+  "integrity" "sha512-qvUtwJ3j6qwsF3jLxkZ72qCgjMysPzDfeV240JHiGZsANBYd+EEuu35v7dfrJ9Up0Ak07D7GGSkGhCHTqg/5wA=="
+  "resolved" "https://registry.npmjs.org/isomorphic-fetch/-/isomorphic-fetch-3.0.0.tgz"
+  "version" "3.0.0"
+  dependencies:
+    "node-fetch" "^2.6.1"
+    "whatwg-fetch" "^3.4.1"
 
 "isstream@~0.1.2":
   "integrity" "sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo="
@@ -15015,6 +15030,11 @@
     "typedarray-to-buffer" "^3.1.5"
     "utf-8-validate" "^5.0.2"
     "yaeti" "^0.0.6"
+
+"whatwg-fetch@^3.4.1":
+  "integrity" "sha512-jXkLtsR42xhXg7akoDKvKWE40eJeI+2KZqcp2h3NsOrRnDvtWX36KcKl30dy+hxECivdk2BVUHVNrPtoMBUx6A=="
+  "resolved" "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-3.5.0.tgz"
+  "version" "3.5.0"
 
 "which-module@^2.0.0":
   "integrity" "sha1-2e8H3Od7mQK4o6j6SzHD4/fm6Ho="
