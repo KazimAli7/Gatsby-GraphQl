@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client"
 
 const Layout = ({ title, children }) => {
   // const rootPath = `${__PATH_PREFIX__}/`
@@ -19,9 +20,13 @@ const Layout = ({ title, children }) => {
       </Link>
     )
   // }
-
+  const client = new ApolloClient({
+    cache: new InMemoryCache(),
+    uri:'http://18.222.170.161:4000/'
+  })
   return (
-    <div className="global-wrapper">
+    <ApolloProvider client={client}>
+      <div className="global-wrapper">
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
@@ -30,6 +35,7 @@ const Layout = ({ title, children }) => {
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
     </div>
+    </ApolloProvider>
   )
 }
 
