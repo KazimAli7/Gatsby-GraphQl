@@ -1,0 +1,19 @@
+.mainHeader {
+    font-size: 34px;
+    font-weight: bold;
+    color: cornflowerblue;
+    text-decoration:underline;
+}
+
+.headerView {
+    font-size: 20px;
+    font-weight: bold;
+    color: cornflowerblue;
+    text-decoration:underline;
+    margin: 20px 0px;
+}
+
+.description{
+    text-align: justify;
+    font-size: 14px;
+}
