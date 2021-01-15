@@ -1,4 +1,7 @@
 var plugins = [{
+      plugin: require('/Users/kazim-invozone/Documents/WorkPlace/GitProject/Gatsby-GraphQl/node_modules/gatsby-plugin-apollo/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('/Users/kazim-invozone/Documents/WorkPlace/GitProject/Gatsby-GraphQl/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
       options: {"plugins":[],"head":false,"anonymize":false,"respectDNT":false,"exclude":[],"pageTransitionDelay":0},
     },{
