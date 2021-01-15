@@ -33,7 +33,7 @@ function Hello() {
           gatsby-config.js).
         </p>
   </div>;
-  if(data.getAllPost !== undefined){
+  if(data !== undefined){
     return(
       <div>
         <BlogView data={data.getAllPost} />
