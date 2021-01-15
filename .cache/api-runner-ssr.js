@@ -1,14 +1,14 @@
 var plugins = [{
-      plugin: require('/Users/kazim-invozone/Documents/WorkPlace/Project/Gatsby/gatsby-starter-blog/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
+      plugin: require('/Users/kazim-invozone/Documents/WorkPlace/GitProject/Gatsby-GraphQl/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
       options: {"plugins":[],"head":false,"anonymize":false,"respectDNT":false,"exclude":[],"pageTransitionDelay":0},
     },{
-      plugin: require('/Users/kazim-invozone/Documents/WorkPlace/Project/Gatsby/gatsby-starter-blog/node_modules/gatsby-plugin-feed/gatsby-ssr'),
+      plugin: require('/Users/kazim-invozone/Documents/WorkPlace/GitProject/Gatsby-GraphQl/node_modules/gatsby-plugin-feed/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/kazim-invozone/Documents/WorkPlace/Project/Gatsby/gatsby-starter-blog/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('/Users/kazim-invozone/Documents/WorkPlace/GitProject/Gatsby-GraphQl/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"Gatsby Starter Blog","short_name":"GatsbyJS","start_url":"/","background_color":"#ffffff","theme_color":"#663399","display":"minimal-ui","icon":"content/assets/gatsby-icon.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"4a9773549091c227cd2eb82ccd9c5e3a"},
     },{
-      plugin: require('/Users/kazim-invozone/Documents/WorkPlace/Project/Gatsby/gatsby-starter-blog/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/Users/kazim-invozone/Documents/WorkPlace/GitProject/Gatsby-GraphQl/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:

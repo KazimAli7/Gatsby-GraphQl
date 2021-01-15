@@ -9,7 +9,6 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 const BlogIndex = ({ data, location }) => {
   const siteTitle = 'Great Gatsby' || `Title`
   const posts = data.allMarkdownRemark.nodes
-  console.log('checking the data props here', data)
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>

@@ -5,15 +5,8 @@ import './BlogView.css'
 const BlogView = ({ data }) => {
     const JsonView = value => {
         const jsonValue = JSON.parse(value)
-        // jsonValue.map((i, index) => {
-        //     if(i.content){
-        //         i.content.map((elmt) => {
-        //             console.log('elemts here', elmt.text ? elmt.text : "no text")
-        //         })
-        //     }
-        // })
         if(jsonValue){
-            console.log('data view here',  jsonValue[0].content)
+            // console.log('data view here',  jsonValue[0].content)
             return(
                 <p className="description">
                     {

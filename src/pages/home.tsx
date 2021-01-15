@@ -31,7 +31,6 @@ function Hello() {
   const { loading, error, data } = useQuery(GET_GREETING, {
     variables: { page: 1 },
   });
-  console.log('data greeting', data, error)
   if (loading) return <div>
     <SEO title="Great Gatsby" />
         {/* <Bio /> */}
