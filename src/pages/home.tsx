@@ -40,11 +40,23 @@ function Hello() {
           gatsby-config.js).
         </p>
   </div>;
-  return(
-    <div>
-      <BlogView data={data.getAllPost} />
-    </div>
-  )
+  if(data.getAllPost !== undefined){
+    return(
+      <div>
+        <BlogView data={data.getAllPost} />
+      </div>
+    )
+  } else {
+    return <div>
+    <SEO title="Great Gatsby" />
+        {/* <Bio /> */}
+        <p>
+          No blog posts found. Add markdown posts to "content/blog" (or the
+          directory you specified for the "gatsby-source-filesystem" plugin in
+          gatsby-config.js).
+        </p>
+  </div>;
+  }
 }
 
 export default Hello;
