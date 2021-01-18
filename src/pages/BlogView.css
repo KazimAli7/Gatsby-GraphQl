@@ -17,3 +17,9 @@
     text-align: justify;
     font-size: 14px;
 }
+
+.descriptionView {
+    text-align: justify;
+    font-size: 14px;
+    margin: 10px 0px;
+}

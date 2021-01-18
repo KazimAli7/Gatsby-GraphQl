@@ -5,6 +5,7 @@ exports.components = {
   "component---cache-dev-404-page-js": () => import("./../../dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
   "component---src-pages-404-js": () => import("./../../../src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
   "component---src-pages-about-js": () => import("./../../../src/pages/About.js" /* webpackChunkName: "component---src-pages-about-js" */),
+  "component---src-pages-api-call-js": () => import("./../../../src/pages/ApiCall.js" /* webpackChunkName: "component---src-pages-api-call-js" */),
   "component---src-pages-blog-view-tsx": () => import("./../../../src/pages/BlogView.tsx" /* webpackChunkName: "component---src-pages-blog-view-tsx" */),
   "component---src-pages-home-tsx": () => import("./../../../src/pages/home.tsx" /* webpackChunkName: "component---src-pages-home-tsx" */),
   "component---src-pages-index-js": () => import("./../../../src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),

@@ -1,63 +1,73 @@
 import React from "react"
-import { graphql } from "gatsby"
-
-// import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Home from './home';
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = 'Great Gatsby' || `Title`
-  const posts = data.allMarkdownRemark.nodes
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <SEO title="Great Gatsby" />
-        {/* <Bio /> */}
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
+import BlogView from "./BlogView";
+
+class BlogIndex extends React.Component{
+
+  constructor(props){
+    super(props)
+    this.state = {
+      result : []
+    }
   }
 
-  const client = new ApolloClient({
-    cache: new InMemoryCache(),
-    uri:'http://18.222.170.161:4000/'
-  })
+  async componentDidMount(){
+    const page = 1;
+    var query = `query getAllPost($page: Int){
+      getAllPost(page: $page){
+        info {
+          count
+        }
+        result {
+          _id
+          title
+          subtitle
+          content
+          slug
+        }
+    }
+    }`;
+    fetch('http://18.222.170.161:4000/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+            query,
+            variables: { page },
+        })
+    })
+    .then(r => r.json())
+    .then(data => {
+        const postID = data.data
+        console.log("dada", data.data)
+        this.setState({
+            result: postID
+        })
+    });
+  }
 
-  return (
-    <Layout>
-      <ApolloProvider client={client}>
-        <Home />
-      </ApolloProvider>
-    </Layout>
-  )
+  render(){
+    console.log('this.state.dsadsa', this.state.result.length)
+    if(this.state.result.length > 0 || this.state.result !== undefined){
+      return(
+        <Layout>
+          <BlogView data={this.state.result.getAllPost} />
+        </Layout>
+      )
+    } else {
+      return <div>
+      <SEO title="Great Gatsby" />
+          <p>
+            No blog posts found. Add markdown posts to "content/blog" (or the
+            directory you specified for the "gatsby-source-filesystem" plugin in
+            gatsby-config.js).
+          </p>
+    </div>;
+    }
+  }
 }
 
 export default BlogIndex
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-        }
-      }
-    }
-  }
-`
