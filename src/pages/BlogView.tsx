@@ -41,13 +41,15 @@ const BlogView = ({ data }) => {
                             data.result.map((item) => {
                                 return(
                                     <div className="blog-post-preview" key={item._id}>
-                                        <header>
-                                            <div className="headerView">
-                                                <span itemProp="headline">
-                                                    {item.title ? item.title : ''}
-                                                </span>
-                                            </div>
-                                        </header>
+                                        <Link to="src/pages/PostView.js">
+                                            <header>
+                                                <div className="headerView">
+                                                    <span itemProp="headline">
+                                                        {item.title ? item.title : ''}
+                                                    </span>
+                                                </div>
+                                            </header>
+                                        </Link>
                                         <section>
                                             {
                                                 JsonView(item.content)

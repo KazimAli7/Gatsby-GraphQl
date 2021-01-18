@@ -8,7 +8,7 @@ exports.components = {
   "component---src-pages-blog-view-tsx": () => import("./../../../src/pages/BlogView.tsx" /* webpackChunkName: "component---src-pages-blog-view-tsx" */),
   "component---src-pages-home-tsx": () => import("./../../../src/pages/home.tsx" /* webpackChunkName: "component---src-pages-home-tsx" */),
   "component---src-pages-index-js": () => import("./../../../src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
-  "component---src-pages-post-view-tsx": () => import("./../../../src/pages/PostView.tsx" /* webpackChunkName: "component---src-pages-post-view-tsx" */),
+  "component---src-pages-post-view-js": () => import("./../../../src/pages/PostView.js" /* webpackChunkName: "component---src-pages-post-view-js" */),
   "component---src-pages-using-typescript-tsx": () => import("./../../../src/pages/using-typescript.tsx" /* webpackChunkName: "component---src-pages-using-typescript-tsx" */),
   "component---src-templates-blog-post-js": () => import("./../../../src/templates/blog-post.js" /* webpackChunkName: "component---src-templates-blog-post-js" */)
 }

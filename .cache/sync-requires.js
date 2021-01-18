@@ -11,7 +11,7 @@ exports.components = {
   "component---src-pages-blog-view-tsx": hot(preferDefault(require("/Users/kazim-invozone/Documents/WorkPlace/GitProject/Gatsby-GraphQl/src/pages/BlogView.tsx"))),
   "component---src-pages-home-tsx": hot(preferDefault(require("/Users/kazim-invozone/Documents/WorkPlace/GitProject/Gatsby-GraphQl/src/pages/home.tsx"))),
   "component---src-pages-index-js": hot(preferDefault(require("/Users/kazim-invozone/Documents/WorkPlace/GitProject/Gatsby-GraphQl/src/pages/index.js"))),
-  "component---src-pages-post-view-tsx": hot(preferDefault(require("/Users/kazim-invozone/Documents/WorkPlace/GitProject/Gatsby-GraphQl/src/pages/PostView.tsx"))),
+  "component---src-pages-post-view-js": hot(preferDefault(require("/Users/kazim-invozone/Documents/WorkPlace/GitProject/Gatsby-GraphQl/src/pages/PostView.js"))),
   "component---src-pages-using-typescript-tsx": hot(preferDefault(require("/Users/kazim-invozone/Documents/WorkPlace/GitProject/Gatsby-GraphQl/src/pages/using-typescript.tsx"))),
   "component---src-templates-blog-post-js": hot(preferDefault(require("/Users/kazim-invozone/Documents/WorkPlace/GitProject/Gatsby-GraphQl/src/templates/blog-post.js")))
 }
