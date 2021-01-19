@@ -42,7 +42,6 @@ class BlogIndex extends React.Component{
     .then(r => r.json())
     .then(data => {
         const postID = data.data
-        console.log("dada", data.data)
         this.setState({
             result: postID
         })
@@ -50,7 +49,6 @@ class BlogIndex extends React.Component{
   }
 
   render(){
-    console.log('this.state.dsadsa', this.state.result.length)
     if(this.state.result && this.state.result){
       return(
         <Layout>

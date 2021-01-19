@@ -35,7 +35,14 @@ const BlogView = ({ data }) => {
             {
                 data ?
                 <div>
-                    <div className="mainHeader"> All Posts </div>
+                    <div className="flex justify-between">
+                        <div className="mainHeader"> All Posts </div>
+                        <Link to="/PostView/AddPost">
+                            <button className="bg-purple-600 h-8 rounded w-32 text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50">
+                                Add Post
+                            </button>
+                        </Link>
+                    </div>
                     <article 
                         className="post-list-item"
                             itemScope
