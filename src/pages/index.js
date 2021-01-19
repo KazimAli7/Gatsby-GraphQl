@@ -51,7 +51,7 @@ class BlogIndex extends React.Component{
 
   render(){
     console.log('this.state.dsadsa', this.state.result.length)
-    if(this.state.result !== undefined){
+    if(this.state.result && this.state.result){
       return(
         <Layout>
           <BlogView data={this.state.result.getAllPost} />
