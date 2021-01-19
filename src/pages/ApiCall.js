@@ -2,19 +2,19 @@ import React from 'react'
 import SEO from '../components/seo'
 import Layout from "../components/layout"
 import './BlogView.css'
+import { Link } from 'gatsby'
 
 export default class ApiCall extends React.Component{
     constructor(props){
         super(props)
         this.state = {
             result: [],
-            ID: '5fff4f10b9f70d6b03baebf7'
+            ID: ''
         }
     }
     
-    componentDidMount(){
+    async componentDidMount(){
         const id = this.props.location.state.postID;
-        console.log('data returned:', this.props.location.state.postID)
         var query = `query getPostById($id: ID!) {
             getPostById(id: $id){
                 title
@@ -27,7 +27,7 @@ export default class ApiCall extends React.Component{
                 status
             }
         }`;
-        fetch('http://18.222.170.161:4000/', {
+        const result = await fetch('http://18.222.170.161:4000/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -41,10 +41,12 @@ export default class ApiCall extends React.Component{
         .then(r => r.json())
         .then(data => {
             const postID = data.data.getPostById
-            this.setState({
-                result: postID
-            })
+            return postID
         });
+        this.setState({
+            result: result,
+            ID: id
+        })
     }
 
     displayContent = (value) => {
@@ -54,7 +56,7 @@ export default class ApiCall extends React.Component{
                 return item
             }
         })
-        console.log('data view here',  result)
+        console.log('dasdasd', result)
         return(
             <div>
                 {
@@ -79,7 +81,7 @@ export default class ApiCall extends React.Component{
     }
 
     render(){
-        console.log("dasdsadsa", this.state.result.content)
+        console.log("dsadasd", this.state.ID)
         return(
             <Layout>
                 <SEO title={this.state.result.title ? this.state.result.title : "All Post"} />
@@ -88,6 +90,16 @@ export default class ApiCall extends React.Component{
                         <span>
                             {this.state.result.title ? this.state.result.title : 'Post Title'}
                         </span>
+                        <Link 
+                            to="/PostView/EditPage" 
+                            state={{
+                                postID: this.state.ID
+                            }}
+                            >
+                            <svg className="h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                            </svg>
+                        </Link>
                     </div>
                 </header>
                 <main>
